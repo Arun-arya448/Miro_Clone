@@ -7,6 +7,7 @@ import{createRoomContext} from "@liveblocks/react";
 
 const client = createClient({
   //publicApiKey: "pk_dev_mAhv_YFEb8NWuCuzEbVEOnO8JWX00TMYsDTvppTrmmjMWr5L_ZwiM8Ka7eYVO9kB",
+  throttle: 16,
   authEndpoint: "/api/liveblocks-auth",
 });
 
@@ -16,11 +17,17 @@ export const {
   useRoom,
   useSelf,
   useOthers,
+  useOther,
+  useOthersConnectionIds,
   useMyPresence,
   useUpdateMyPresence,
   useStorage,
   useMutation,
+  useHistory,
+  useCanUndo,
+  useCanRedo,
 } = createRoomContext(client);
+
 
 
 //Types;
@@ -29,7 +36,7 @@ declare global {
     // Each user's Presence, for useMyPresence, useOthers, etc.
     Presence: {
       // Example, real-time cursor coordinates
-      // cursor: { x: number; y: number };
+      cursor: { x: number; y: number } | null;
     };
 
     // The Storage tree for the room, for useMutation, useStorage, etc.
