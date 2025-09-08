@@ -10,6 +10,7 @@ import { Toolbar } from "./toolbar";
 import { CursorsPresence } from "./cursors-presence";
 import { pointerEventtoCanvasPoint,connectionIdToColor } from "@/lib/utils";
 import { LayerPreview } from "./layer-preview";
+import { SelectionBox } from "./selection-box";
 // import { useSelf } from "@liveblocks/react/suspense"; //not @liveblocks/config;
 
 const MAX_LAYERS = 100;
@@ -65,6 +66,10 @@ export const Canvas = ({
         setCanvasState({mode: CanvasMode.None});
         
     },[lastUsedColor]);
+
+
+    // const onResizeHandlePointerDown = 
+
 
 
     const onWheel = useCallback((e: React.WheelEvent) =>{
@@ -167,7 +172,10 @@ export const Canvas = ({
                         onLayerPointerDown={onLayerPointerDown}
                         selectionColor={layeridsToColorSelection[layerId]}
                     />
-                  ))}    
+                  ))}  
+                     <SelectionBox
+                        onResizeHandlePointerDown={() => {}}
+                     />  
                     <CursorsPresence/>
                 </g>
             </svg>
