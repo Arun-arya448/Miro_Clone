@@ -53,7 +53,7 @@ export const SelectionBox = memo(({
                         }}
                         onPointerDown={(e)=>{
                             e.stopPropagation();
-                            //todo: add resize handler;
+                            onResizeHandlePointerDown(Side.Top + Side.Left, bounds); 
                         }}
                     />
                     {/* top-mid */}
@@ -69,7 +69,7 @@ export const SelectionBox = memo(({
                         }}
                         onPointerDown={(e)=>{
                             e.stopPropagation();
-                            //todo: add resize handler;
+                            onResizeHandlePointerDown(Side.Top, bounds);
                         }}
                     />
                     {/* top-right */}
@@ -85,7 +85,7 @@ export const SelectionBox = memo(({
                         }}
                         onPointerDown={(e)=>{
                             e.stopPropagation();
-                            //todo: add resize handler;
+                            onResizeHandlePointerDown(Side.Top + Side.Right, bounds);
                         }}
                     />
                     {/* mid-right */}
@@ -101,7 +101,7 @@ export const SelectionBox = memo(({
                         }}
                         onPointerDown={(e)=>{
                             e.stopPropagation();
-                            //todo: add resize handler;
+                            onResizeHandlePointerDown(Side.Right,bounds);
                         }}
                     />
                     {/* bottom-right */}
@@ -117,7 +117,7 @@ export const SelectionBox = memo(({
                         }}
                         onPointerDown={(e)=>{
                             e.stopPropagation();
-                            //todo: add resize handler;
+                            onResizeHandlePointerDown(Side.Bottom + Side.Right, bounds);
                         }}
                     />
                     {/* bottom-mid */}
@@ -133,7 +133,7 @@ export const SelectionBox = memo(({
                         }}
                         onPointerDown={(e)=>{
                             e.stopPropagation();
-                            //todo: add resize handler;
+                            onResizeHandlePointerDown(Side.Bottom,bounds);
                         }}
                     />
                     {/* bottom-left */}
@@ -149,7 +149,7 @@ export const SelectionBox = memo(({
                         }}
                         onPointerDown={(e)=>{
                             e.stopPropagation();
-                            //todo: add resize handler;
+                            onResizeHandlePointerDown(Side.Bottom + Side.Left, bounds);
                         }}
                     />
                     {/* left-mid */}
@@ -165,7 +165,7 @@ export const SelectionBox = memo(({
                         }}
                         onPointerDown={(e)=>{
                             e.stopPropagation();
-                            //todo: add resize handler;
+                            onResizeHandlePointerDown(Side.Left,bounds);
                         }}
                     />
                 </>
