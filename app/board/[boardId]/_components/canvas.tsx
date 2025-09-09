@@ -11,6 +11,7 @@ import { CursorsPresence } from "./cursors-presence";
 import { pointerEventtoCanvasPoint,connectionIdToColor, resizeBounds } from "@/lib/utils";
 import { LayerPreview } from "./layer-preview";
 import { SelectionBox } from "./selection-box";
+import { SelectionTools } from "./selection-tools";
 // import { useSelf } from "@liveblocks/react/suspense"; //not @liveblocks/config;
 
 const MAX_LAYERS = 100;
@@ -251,6 +252,11 @@ export const Canvas = ({
               canRedo={canRedo}
               undo={history.undo}
               redo={history.redo}
+            />
+
+            <SelectionTools
+                camera={camera}
+                setLastusedColor={setLastUsedColor}
             />
 
             <svg className="h-[100vh] w-[100vw]"
