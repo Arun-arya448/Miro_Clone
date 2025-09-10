@@ -1,5 +1,4 @@
 "use client";
-import { useSearchParams } from "next/navigation";
 import { EmptyOrg } from "./_components/empty-org";
 import { useOrganization } from "@clerk/nextjs";
 import { BoardList } from "./_components/board-list";

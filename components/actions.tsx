@@ -2,7 +2,7 @@
 import { toast } from "sonner";
 import { Link2, Pencil, Trash2 } from "lucide-react";
 import { DropdownMenuContentProps } from "@radix-ui/react-dropdown-menu";
-import { DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger,DropdownMenuSeparator } from "./ui/dropdown-menu";
+import { DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger } from "./ui/dropdown-menu";
 import { useApiMutation } from "@/hooks/use-api-mutation";
 import { api } from "@/convex/_generated/api";
 import { ConfirmModal } from "./confirm-modal";
